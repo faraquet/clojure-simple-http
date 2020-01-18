@@ -5,6 +5,7 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [http-kit "2.3.0"]
-                 [clj-time "0.15.2"]]
+                 [clj-time "0.15.2"]
+                 [clj-postgresql "0.7.0"]]
   :repl-options {:init-ns clojure-simple-http.core}
   :main clojure-simple-http.core)
