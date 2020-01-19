@@ -8,4 +8,8 @@
   []
   (get (System/getenv) "PGPASSWORD"))
 
-(def db (pg/spec :host "localhost" :user "faraquet" :dbname "hb"))
+(defn- dbname
+  []
+  (get (System/getenv) "PGDATABASE" "postgres"))
+
+(def db (pg/spec :dbname (dbname)))
