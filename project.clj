@@ -6,7 +6,8 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [http-kit "2.3.0"]
                  [clj-time "0.15.2"]
-                 [clj-postgresql "0.7.0"]]
+                 [clj-postgresql "0.7.0"]
+                 [compojure "1.6.1"]]
   :repl-options {:init-ns clojure-simple-http.core}
   :plugins [[lein-ring "0.12.5"]]
   :ring {:handler clojure-simple-http.core/handler}

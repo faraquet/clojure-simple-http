@@ -12,4 +12,4 @@
   []
   (get (System/getenv) "PGDATABASE" "postgres"))
 
-(def db (pg/spec :dbname (dbname)))
+(def spec (pg/spec :dbname (dbname)))
