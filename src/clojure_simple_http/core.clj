@@ -8,7 +8,7 @@
             [clojure.java.io :as io]))
 
 (defroutes site-routes
-  (GET "/" [] (jdbc/query database/spec ["select current_time::char(8)"]))
+  (GET "/" [] database/get-time)
   (route/not-found "Not found"))
 
 (def handler

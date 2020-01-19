@@ -13,3 +13,5 @@
   (get (System/getenv) "PGDATABASE" "postgres"))
 
 (def spec (pg/spec :dbname (dbname)))
+
+(def get-time (jdbc/query spec ["select current_time::char(8)"]))
