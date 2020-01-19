@@ -9,6 +9,8 @@
 
 (defroutes site-routes
   (GET "/" [] database/get-time)
+  (context "/users/:user-id" [user-id]
+           (GET "/" [] user-id))
   (route/not-found "Not found"))
 
 (def handler
