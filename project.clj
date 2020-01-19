@@ -8,4 +8,6 @@
                  [clj-time "0.15.2"]
                  [clj-postgresql "0.7.0"]]
   :repl-options {:init-ns clojure-simple-http.core}
+  :plugins [[lein-ring "0.12.5"]]
+  :ring {:handler clojure-simple-http.core/handler}
   :main clojure-simple-http.core)

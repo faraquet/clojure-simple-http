@@ -14,11 +14,7 @@
 
 (def db (pg/pool :host "localhost" :user "faraquet" :dbname "hb"))
 
-(defn app [req]
+(defn handler [req]
   {:status  200
    :headers {"Content-Type" "text/html"}
    :body    (jdbc/query db ["select current_time::char(8)"])})
-
-(defn -main [& args]
-  (run-server app {:port 8080})
-  (println "Server started on port 8080"))
