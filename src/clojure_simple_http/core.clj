@@ -8,7 +8,8 @@
             [clojure.java.io :as io]))
 
 (defroutes site-routes
-  (GET "/" [] database/get-time)
+  (GET "/" [] "You are on a homepage")
+  (GET "/time" [] (map :current_time database/get-time))
   (context "/users/:user-id" [user-id]
            (GET "/" [] user-id))
   (route/not-found "Not found"))
